@@ -110,16 +110,24 @@ export default function App() {
   /* ---------------- BACKEND CALL ---------------- */
 
   const analyze = async () => {
-    if (!file) return
+  if (!file) return
+
+  try {
     const form = new FormData()
     form.append("file", file)
 
-    const API = import.meta.env.VITE_API_URL
-    axios.post("https://doctor-finai-backend.onrender.com/analyze", form)
+    const API = import.meta.env.VITE_API_URL || 
+      "https://doctor-finai-backend.onrender.com"
 
+    const res = await axios.post(`${API}/analyze`, form)
 
     setData(res.data)
+  } catch (err) {
+    alert("Backend is waking up or an error occurred. Try again in 30 seconds.")
+    console.error(err)
   }
+}
+
 
   /* ---------------- PDF EXPORT ---------------- */
 
