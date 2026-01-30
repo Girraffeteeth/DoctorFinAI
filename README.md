@@ -85,7 +85,7 @@ DoctorFinAI/
 ---
 
 ## 🎥 Demo Video
-(YouTube / Google Drive link here)
+https://www.youtube.com/watch?v=mj1ckTRLwmw
 
 ---
 
