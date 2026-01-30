@@ -115,7 +115,8 @@ export default function App() {
     form.append("file", file)
 
     const API = import.meta.env.VITE_API_URL
-    axios.post(`${API}/analyze`, form)
+    axios.post("https://doctor-finai-backend.onrender.com/analyze", form)
+
 
     setData(res.data)
   }
