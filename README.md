@@ -74,10 +74,12 @@ Doctor FinAI simplifies this by acting as a **virtual financial doctor** — dia
 ---
 
 ## 📂 Project Structure
+```bash
 DoctorFinAI/
-├── frontend/ # React + Tailwind UI
-├── backend/ # FastAPI + AI Engine
+├── backend/      # FastAPI Server
+├── frontend/     # React + UI Dashboard
 └── README.md
+```
 
 
 ---
