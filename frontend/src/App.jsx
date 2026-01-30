@@ -114,7 +114,9 @@ export default function App() {
     const form = new FormData()
     form.append("file", file)
 
-    const res = await axios.post("http://127.0.0.1:8000/analyze", form)
+    const API = import.meta.env.VITE_API_URL
+    axios.post(`${API}/analyze`, form)
+
     setData(res.data)
   }
 
